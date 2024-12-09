@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informasi Siswa</title>
+    <style>
+      body {
+        background-color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HELLO SISWA</h1>
+    <label for="nama">nama</label>
+    <input type="text" name="nama" id="nama" />
+
+    <label>
+      Jurusan:
+      <select name="Jurusan" id="Jurusan">
+        <option value="if">Teknik Jurusan Komputer</option>
+        <option value="if">Teknik Otomotif</option>
+        <option value="ti">Jurusan Akuntasi</option>
+      </select>
+    </label>
+    <button style="margin-bottom: 30px" onclick="alert('Wajib di isi')" ;>
+      Kirim!
+    </button>
+    <div
+      tabindex="0"
+      onclick="showAlert('wajib di pilih')"
+      role="button"
+      id="button1"
+    >
+      tombol 1
+    </div>
+    <div>tombol 2</div>
+    <script>
+      const showAlert = (text) => alert(text);
+      const button1 = document.querySelector('#button1');
+      button1.addEventListener('keyup', function(e) {
+        if (e.keyCode == 32 || e.keyCode == 13) {
+          showAlert('wajib di pilih');
+        }
+      })
+    </script>
+  </body>
+</html>
